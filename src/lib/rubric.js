@@ -103,3 +103,11 @@ export const calculateRubricScores = (subScores = {}) => {
     categoryAverages,
   };
 };
+
+/**
+ * Standalone calculation for overall rating imported by SchoolProfile.jsx
+ */
+export const calculateOverallRating = (subScores = {}) => {
+  const { overallRating } = calculateRubricScores(subScores);
+  return overallRating;
+};
