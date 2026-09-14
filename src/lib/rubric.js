@@ -62,6 +62,9 @@ export const RUBRIC_CATEGORIES = [
   },
 ];
 
+// Alias for pages importing RUBRIC directly
+export const RUBRIC = RUBRIC_CATEGORIES;
+
 export const RED_FLAGS = [
   { id: 'rf_documents', label: 'Mandatory original document submission' },
   { id: 'rf_no_sitting', label: 'No sitting in classroom policy' },
@@ -111,3 +114,4 @@ export const calculateOverallRating = (subScores = {}) => {
   const { overallRating } = calculateRubricScores(subScores);
   return overallRating;
 };
+    
