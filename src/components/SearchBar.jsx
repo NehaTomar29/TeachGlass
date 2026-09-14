@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SearchBar = ({ placeholder = "Search your school (e.g., DPS RK Puram)...", onAddSchoolClick }) => {
+const SearchBar = ({ placeholder = "Search your school (e.g., DPS RK Puram)...", onAddSchoolClick = () => {} }) => {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
     e.preventDefault();
     if (query.trim()) {
-      navigate(`/directory?search=${encodeURIComponent(query.trim())}`);
+      navigate(`/explore?search=${encodeURIComponent(query.trim())}`);
     }
   };
 
